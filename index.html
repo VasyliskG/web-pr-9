@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мій навчальний профіль</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Практична робота №9</p>
+          <h1>Мій навчальний профіль</h1>
+          <p class="hero-text">
+            Персональний вебзастосунок студента з динамічними списками, пошуком, сортуванням і збереженням даних у браузері.
+          </p>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button">Темна тема</button>
+      </header>
+
+      <main class="grid-layout">
+        <section class="card profile-card">
+          <div class="profile-top">
+            <img
+              class="avatar"
+              src="img/160220504.png"
+              alt="Фото студента"
+            />
+            <div>
+              <p class="label">ПІБ</p>
+              <h2 id="studentName"> Козак Василь Васильович</h2>
+              <p class="meta">Група: <span id="studentGroup">КН-32</span></p>
+            </div>
+          </div>
+          <p id="studentBio" class="bio">
+            Студент третього курсу, групи КН-32, спеціальності 121 Інженерія програмного забезпечення.
+          </p>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="label">Предмети та навички</p>
+              <h3>Динамічний список</h3>
+            </div>
+            <button class="ghost-button" id="sortSubjects" type="button">Сортувати A-Z</button>
+          </div>
+
+          <form id="subjectForm" class="stack-form">
+            <label class="field">
+              <span>Додати предмет або навичку</span>
+              <input id="subjectInput" type="text" placeholder="Наприклад: JavaScript" maxlength="50" />
+            </label>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Додати</button>
+            </div>
+          </form>
+
+          <label class="field search-field">
+            <span>Пошук по списку</span>
+            <input id="searchInput" type="search" placeholder="Почніть вводити текст" />
+          </label>
+
+          <ul id="subjectList" class="items-list"></ul>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="label">Результати навчання</p>
+              <h3>Оцінки та бали</h3>
+            </div>
+          </div>
+
+          <form id="gradeForm" class="stack-form">
+            <label class="field">
+              <span>Додати результат</span>
+              <input id="gradeInput" type="text" placeholder="Наприклад: Модуль 1 — 95 балів" maxlength="80" />
+            </label>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Додати результат</button>
+            </div>
+          </form>
+
+          <ul id="gradeList" class="items-list compact"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
